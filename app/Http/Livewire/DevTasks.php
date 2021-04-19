@@ -3,11 +3,12 @@
 namespace App\Http\Livewire;
 
 use App\Models\Developer;
+use App\Models\DevTask;
 use Livewire\Component;
 
 class DevTasks extends Component
 {
-    public $devs, $selectedDev;
+    public $devs, $selectedDev, $deadline;
 
     public function selectDev($dev){
         $this->selectedDev = $dev;
@@ -19,6 +20,8 @@ class DevTasks extends Component
         $this->devs = Developer::all();
 
         $this->selectedDev = $this->devs->first();
+
+        $this->deadline = DevTask::all()->max('week');
 
         return view('livewire.dev-tasks');
     }

@@ -32,6 +32,13 @@
                         ]
                         @endif
                     </div>
+
+                    <div class="mt-6">
+                        <a class="bg-indigo-500 text-white active:bg-indigo-600 font-bold uppercase text-xl px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-2 mb-2" 
+                            type="button" href="{{ route('devTasks') }}">
+                            See Calculated Plans
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
